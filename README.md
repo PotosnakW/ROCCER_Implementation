@@ -23,8 +23,10 @@ Important information:
 How to run the code and generate ROCCER decision list:
 - change 'config = ...' to correspond to class label in data
 - Import ROCCER_Algorithm.py file and use 'Get_ROCCER_Decision_List' command
-- variable descriptions for 'Get_ROCCER_Decision_List' command:
-- association_rules_dir = association rules json file directory
-  - dset_dir = dataset directory
-  - dlist_file_dir = directory for ROCCER generated decision list json file
 - Decision list file named 'Decision_List.json' will be saved under the specified directory after code is run
+
+
+Variable descriptions for 'Get_ROCCER_Decision_List' command:
+- association_rules_dir = association rules json file directory
+- dset_dir = dataset directory
+- dlist_file_dir = directory for ROCCER generated decision list json file
