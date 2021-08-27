@@ -16,14 +16,15 @@ Important information:
 - Data must be organized in a csv file with samples for rows and variables for columns
 - A separate rule generation algorithm (or rule association algorithm) is needed to first generate rules before applying ROCCER to generate the decision list as ROCCER is a rule selection algorithm
 - Generated rules should be saved in a json file named 'Association_Rules.json'
-- Association_Rules must be in the form of list of a list of dictionaries:
-- [[str_feature': str_condition, str_feature: str_condition, ...], [str_feature: str_condition, str_feature: str_condition, ...], ...]
+- Association_Rules.json must be in the form of list of a list of dictionaries (example below):
+    - [[{str_feature: str_condition}, {str_feature: str_condition}, ...], [{str_feature: str_condition}, {str_feature: str_condition}, ...], ...]
+    - [[{'age': 'x>60'}, {'gender': 'x=1'}], [{'height': 60<x<=70}, ...], ...]
 
 
-How to run the code and generate ROCCER decision list:
-- change 'config = ...' to correspond to class label in data
-- Import ROCCER_Algorithm.py file and use 'Get_ROCCER_Decision_List' command
-- Decision list file named 'Decision_List.json' will be saved under the specified directory after code is run
+How to run the ROCCER implementation and generate a decision list:
+1. change 'config = ...' to correspond to class label in data
+2. Import ROCCER_Algorithm.py file and use 'Get_ROCCER_Decision_List' command
+3. Decision list file named 'Decision_List.json' will be saved under the specified decision list directory after code is run
 
 
 Variable descriptions for 'Get_ROCCER_Decision_List' command:
